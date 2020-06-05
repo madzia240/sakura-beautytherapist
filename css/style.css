@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Varela Round', sans-serif; */
+    font-family: 'Playfair Display', serif;
+}
+
+/* nav */
+nav {
+    width: 100%;
+    position: fixed;
+    top: -500px;
+    transition: 1s;
+    z-index: 1;
+    opacity: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    list-style: none;
+}
+
+nav li {
+
+    background-color: rgb(245, 224, 241);
+    flex-basis: 10vh;
+
+}
+
+nav li {
+    display: inline-block;
+    width: 100%;
+    line-height: 10vh;
+    font-size: 3vh;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(50, 50, 50);
+    letter-spacing: 1.5px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+nav li:hover {
+    background-color: black;
+    color: rgb(245, 224, 241);
+}
+
+
+.burger {
+    position: fixed;
+    top: 4vh;
+    right: 7vw;
+    font-size: 4vh;
+    z-index: 2;
+}
+
+
+.burger .fa-bars {
+    display: block;
+    color: rgb(130, 130, 130);
+}
+
+.burger .fa-times {
+    display: none;
+    color: rgb(130, 130, 130);
+}
+
+
+
+@media (min-width: 640px) {
+    nav li {
+        font-size: 5vh;
+    }
+
+    .burger {
+        top: 4vh;
+        right: 4vw;
+        font-size: 6vh;
+    }
+}
+
+@media (min-width: 800px) {
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav ul li {
+        flex-basis: 25vw;
+    }
+
+    nav ul li {
+        font-size: 2vh;
+    }
+
+    .burger {
+        display: none;
+    }
+}
+
+/* header */
+header {
+    height: 100vh;
+    background-image: url('../img/cherry-blossoms.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    opacity: 0;
+    transition: 8s;
+    overflow: hidden;
+}
+
+header div {
+    position: absolute;
+    bottom: 5%;
+    left: 2%;
+    color: rgb(30, 30, 30);
+    font-size: 3vh;
+    line-height: 5vh;
+    letter-spacing: 1px;
+    font-style: italic;
+    text-align: center;
+}
+
+header .author {
+    font-size: 2vh;
+}
+
+header .first {
+    animation: pChanging 40s infinite linear backwards;
+}
+
+header .second {
+    animation: pChanging2 40s infinite linear backwards;
+}
+
+
+
+@keyframes pChanging {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    5% {
+        opacity: 1;
+
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1)
+    }
+
+    55% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes pChanging2 {
+    0% {
+        opacity: 0;
+    }
+
+    55% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    60% {
+        opacity: 1;
+
+    }
+
+    95% {
+        opacity: 1;
+        transform: scale(1)
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media(min-width: 1024px) {
+    header div {
+        position: absolute;
+        bottom: 65%;
+        left: 40%;
+        font-size: 2.5vh;
+    }
+}
+
+/* about */
+.about {
+    max-width: 1200px;
+    min-height: 50vh;
+    margin: 0 auto;
+    padding: 10vh 5vw;
+    text-align: center;
+    opacity: 0;
+    transition: 5s;
+    color: rgb(50, 50, 50);
+}
+
+.about h1 {
+    margin-bottom: 10vh;
+}
+
+.about p {
+    display: inline-block;
+    padding: 0 5%;
+    line-height: 1.7rem;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+/* usługi */
+.services {
+    background-image: url(../img/sakura.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    /* max-width: 1200px; */
+    min-height: 50vh;
+    margin: 0 auto;
+    /* padding-bottom: 10vh; */
+    text-align: center;
+    opacity: 0;
+    transition: 5s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: rgb(50, 50, 50);
+    font-weight: bold;
+
+}
+
+.services .bgc {
+
+    background-color: rgba(250, 250, 250, .7);
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.services h1 {
+    display: inline-block;
+    padding: 10vh 0 5vh;
+    /* background-color: rgba(230, 230, 230, .4); */
+    flex-basis: 100%;
+}
+
+.services div {
+    flex-basis: 80%;
+    padding-bottom: 5vh;
+}
+
+.services div h2 {
+    margin: 5vh 0;
+    /* font-size: 2.5vh; */
+
+}
+
+.services div ul {
+    list-style: none;
+
+}
+
+.services div ul li {
+    line-height: 5vh;
+}
+
+
+@media (min-width: 600px) {
+    .services div {
+        flex-basis: 50%;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .services div {
+        flex-basis: 20%;
+    }
+}
+
+/* galeria */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10vh 0;
+    opacity: 0;
+    transition: 5s;
+}
+
+.gallery h2 {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.gallery div {
+    flex-basis: 70%;
+    background-color: black;
+    /* height: 30vh; */
+    margin: 5vh 0;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 15px rgb(50, 50, 50);
+}
+
+.gallery a {
+    flex-basis: 100%;
+    margin: 0 30%;
+    line-height: 3.5vh;
+    font-size: 2vh;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    /* background-color: rgb(245, 224, 241);
+    border: 1.5px solid black; */
+    color: rgb(130, 130, 130);
+    transition: .5s;
+}
+
+.gallery a:hover {
+    color: black;
+    transform: scale(1.1);
+}
+
+@media (min-width: 640px) {
+    .gallery div {
+        flex-basis: 40%;
+    }
+
+    .gallery a {
+        margin: 0 40%;
+        font-size: 3vh;
+    }
+}
+
+@media (min-width: 1200px) {
+    .gallery div {
+        flex-basis: 20%;
+    }
+}
+
+/* footer */
+footer {
+    background-image: url(../img/japanese-cherry.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+footer .contacts {
+    padding: 5vh 0;
+}
+
+footer .contacts p,
+a {
+    font-size: 3vh;
+}
+
+footer p {
+    text-align: center;
+    color: rgb(50, 50, 50);
+    line-height: 5vh;
+    /* font-weight: bold; */
+}
+
+footer a {
+    display: block;
+    text-align: center;
+    color: rgb(50, 50, 50);
+    line-height: 5vh;
+    text-decoration: none;
+    width: 80%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+footer a:hover {
+    transform: scale(1.1);
+    color: black;
+}
+
+footer .copy {
+    position: relative;
+    bottom: 0;
+    font-size: 2vh;
+}
+
+/* footer .map {
+    width: 40%;
+    height: 100px;
+} */
+
+/* other */
+.up {
+    position: fixed;
+    bottom: 2vh;
+    right: 3vh;
+    color: rgb(130, 130, 130);
+    opacity: 0;
+    transition: 1s;
+    z-index: 2;
+    font-size: 3vh;
+}
+
+@media (min-width: 640px) {
+    .up {
+        font-size: 4vh;
+    }
+}
