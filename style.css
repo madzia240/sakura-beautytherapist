@@ -31,7 +31,8 @@ section {
 /* pink : #F7D5F4 */
 /* dark : #50434F */
 hr {
-    width: 25%;
+    width: 20%;
+    margin-left: 2.5%;
     height: 4px;
     color: #50434F;
     background-color: #50434F;
@@ -41,7 +42,7 @@ hr {
 /* header */
 header {
     height: 50vh;
-    background-image: url('../img/cherry-blossoms.jpg');
+    background-image: url('img/cherry-blossoms.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -101,7 +102,7 @@ nav ul li:hover {
     padding: 1vh 0 0 1vw;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 360px) {
     .treatments {
         flex-direction: column;
         width: 60%;
