@@ -49,6 +49,7 @@ header {
 
 /* nav */
 nav {
+    width: 100vw;
     height: 30px;
     border-top: 3px solid #50434F;
 }
@@ -102,7 +103,7 @@ nav ul li:hover {
     padding: 1vh 0 0 1vw;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 440px) {
     .treatments {
         flex-direction: column;
         width: 60%;
