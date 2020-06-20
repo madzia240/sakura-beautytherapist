@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1.5px;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+}
+
+h1 {
+    margin-bottom: 5vh;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+section {
+    padding: 5vh 5vw 10vh;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* color */
+/* pink : #F7D5F4 */
+/* dark : #50434F */
+hr {
+    width: 25%;
+    height: 4px;
+    color: #50434F;
+    background-color: #50434F;
+    transition: .7s;
+}
+
+/* header */
+header {
+    height: 50vh;
+    background-image: url('../img/cherry-blossoms.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* nav */
+nav {
+    height: 30px;
+    border-top: 3px solid #50434F;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    list-style: none;
+}
+
+nav ul li {
+    display: block;
+    flex-basis: 25%;
+    line-height: 30px;
+    background-color: transparent;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    background-color: white;
+}
+
+/* first */
+.first {
+    display: block;
+}
+
+/* second */
+.second {
+    display: none;
+    max-width: 1024px;
+}
+
+.treatments {
+    display: flex;
+    justify-content: space-around;
+}
+
+.treatments div {
+    flex-basis: 25%;
+    padding-top: 2vh;
+}
+
+.second ul {
+    list-style: none;
+}
+
+.second ul li {
+    padding: 1vh 0 0 1vw;
+}
+
+@media (max-width: 400px) {
+    .treatments {
+        flex-direction: column;
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+/* third */
+.third {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .third {
+        margin: 0;
+        padding-left: 15vw;
+    }
+}
+
+/* fourth */
+.fourth {
+    display: none;
+}
+
+.contact {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.fourth p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.fourth a {
+    text-decoration: none;
+    color: #50434F
+}
+
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    background-color: #50434F;
+    text-align: center;
+    line-height: 25px;
+    color: #F7D5F4;
+}

@@ -4,46 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" CONTENT="Sakura - studio urody. Strona - wizytówka salonu kosmetycznego.">
-    <meta name='keywords'
-        content='salon kosmetyczny, manicure, pedicure, henna, rzęsy, Wrocław, studio urody, depilacja, zabiegi na twarz'>
-    <link rel="icon" href="flower.png">
-    <meta name="google-site-verification" content="UJ6QkTNHv70_To_qdgIfHLwKmHVnegbx-fhtJDI81rM" />
-    <title>Sakura - studio urody</title>
-    <meta name="robots" content="index,follow">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <title>Document</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="burger"><i class="fas fa-bars "></i>
-        <i class="fas fa-times"></i></div>
+    <header></header>
     <nav>
         <ul>
-            <li class='aboutLi'>o mnie</li>
-            <li class='servicesLi'>usługi</li>
-            <li class='galleryLi'>galeria</li>
-            <li class='contacLi'>kontakt</li>
+            <li class="firstBtn">Sakura</li>
+            <li class="secondBtn">Zabiegi</li>
+            <li class='thirdBtn'>Galeria</li>
+            <li class='fourthBtn'>Kontakt</li>
         </ul>
-
     </nav>
-    <header>
-        <div class="first">
-            <p>Choćbyśmy cały świat przemierzyli w poszukiwaniu Piękna, nie znajdziemy go nigdzie, jeżeli nie
-                nosimy go w sobie…</p>
-            <p class='author'>Ralph Waldo Emerson</p>
-        </div>
-        <div class="second">
-            <p>Wszystko jest piękne, wystarczy tylko umieć dobrze spojrzeć.</p>
-            <p class='author'>Camille Pisarro</p>
-        </div>
-    </header>
-    <section class="about">
-        <h1>O mnie</h1>
+    <hr>
+    <section class="first">
+        <h1>Sakura - studio urody</h1>
         <p class="about-disc">Sakura - japoński kwiat wiśni to symbol naturalnego piękna, delikatności oraz subtelności.
             Wielu mieszkańców tego kraju postrzega go również jako odzwierciedlenie miłości.<br><br>Podobnie myślę o
             pięknie
@@ -52,9 +34,9 @@
             żebyś była zadowolona i szczęśliwa.
         </p>
     </section>
-    <section class='services'>
-        <div class='bgc'>
-            <h1>Zabiegi</h1>
+    <section class="second">
+        <h1>Zabiegi</h1>
+        <div class="treatments">
             <div class="manicure">
                 <h2>Manicure</h2>
                 <ul>
@@ -93,28 +75,124 @@
             </div>
         </div>
     </section>
-    <section class="gallery">
-        <h2>Galeria</h2>
-        <div><img src="img/niebieskie-serca.jpg" alt=""></div>
-        <div><img src="img/baby-boomer.jpg" alt=""></div>
-        <div><img src="img/bialo-czarne.jpg" alt=""></div>
-        <div><img src="img/szkielka.jpg" alt=""></div>
-        <a href="gallery.html">więcej...</a>
+    <section class="third">
+        <h1>galeria</h1>
+        <div class="wrap">
+
+            <div class="row">
+                <div class="column">
+                    <img src="img/andrzejki.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="img/baby-boomer.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="img/bialo-czarne.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="img/brwi.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="img/kotki.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="img/niebieskie-serca.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="img/brwi2.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="img/szkielka.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow">
+                </div>
+            </div>
+
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 8</div>
+                        <img src="img/andrzejki.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 8</div>
+                        <img src="img/baby-boomer.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 8</div>
+                        <img src="img/bialo-czarne.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">4 / 8</div>
+                        <img src="img/brwi.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">5 / 8</div>
+                        <img src="img/kotki.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">6 / 8</div>
+                        <img src="img/niebieskie-serca.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">7 / 8</div>
+                        <img src="img/brwi2.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">8 / 8</div>
+                        <img src="img/szkielka.jpg" style="width:100%">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <div class="mini">
+                        <div class="column">
+                            <img class="demo" src="img/andrzejki.jpg" onclick="currentSlide(1)" alt="Nature">
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="img/baby-boomer.jpg" onclick="currentSlide(2)" alt="Snow">
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="img/bialo-czarne.jpg" onclick="currentSlide(3)" alt="Mountains">
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="img/brwi.jpg" onclick="currentSlide(4)" alt="Lights">
+                        </div>
+                        <div class="column">
+                            <img class="demo" src="img/kotki.jpg" onclick="currentSlide(5)" alt="Lights">
+                        </div>
+                        <div class="column">
+                            <img class="demo" src="img/niebieskie-serca.jpg" onclick="currentSlide(6)" alt="Lights">
+                        </div>
+                        <div class="column">
+                            <img class="demo" src="img/brwi2.jpg" onclick="currentSlide(7)" alt="Lights">
+                        </div>
+                        <div class="column">
+                            <img class="demo" src="img/szkielka.jpg" onclick="currentSlide(8)" alt="Lights">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
     </section>
-    <footer>
-        <!-- <div class="map"></div> -->
-        <div class="contacts">
+    <section class="fourth">
+        <h1>Kontakt</h1>
+        <div class="contact">
             <p class="adress">Adres:<br>ul. Obornicka 77B/1<br>Wrocław</p>
             <p class="phone"><i class="fas fa-mobile-alt"></i> 574 529 675</p>
             <a href="https://www.facebook.com/sakurawroclaw/" class="facebook" target="_blank"><i
                     class="fab fa-facebook-square"></i>
                 @sakurawrocław</a>
         </div>
-        <p class="copy"><i class="far fa-copyright"></i> Magda Florek</p>
+    </section>
+    <footer>
+        <p><i class="far fa-copyright"></i> Magda Florek</p>
     </footer>
-    <div class="up"><i class="fas fa-arrow-up"></i></div>
-    <script src="js/script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
