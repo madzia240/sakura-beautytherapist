@@ -41,17 +41,52 @@ hr {
 
 /* header */
 header {
-    height: 50vh;
+    height: 100vh;
     background-image: url('img/cherry-blossoms.jpg');
     background-size: cover;
     background-position: center;
+    text-align: center;
+    transition: 4s;
+    position: relative;
+}
+
+header .logo {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 7s;
+    overflow: hidden;
+}
+
+.headerHr {
+    width: 130px;
+    margin: 0 auto;
+    transform: translateX(-150%);
+    transition: 4s;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+.logo img {
+    width: 70%;
 }
 
 /* nav */
+hr.nav {
+    width: 100%;
+    margin: 0;
+    transform: translateX(-100%);
+    transition: 5s;
+}
+
 nav {
     width: 100vw;
     height: 30px;
-    border-top: 3px solid #50434F;
+    /* border-top: 3px solid #50434F; */
 }
 
 nav ul {

@@ -1,3 +1,24 @@
+const logo = document.querySelector('.logo')
+const header = document.querySelector("header")
+const hrNav = document.querySelector('.nav')
+const hrHead = document.querySelector('.headerHr')
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        logo.style.transform = 'translate(-50%, -50%) scale(1)'
+    }, 2000)
+    setTimeout(() => {
+        hrHead.style.transform = 'translateX(0)'
+    }, 5000)
+    setTimeout(() => {
+        header.style.height = '40vh';
+        logo.style.transform = 'translate(-50%, -50%) scale(.5)';
+        logo.style.top = '10%';
+        logo.style.left = '85%';
+        hrNav.style.transform = 'translateX(0)'
+    }, 10000)
+})
+
 const firstSec = document.querySelector('.first')
 const secondSec = document.querySelector('.second')
 const thirdSec = document.querySelector('.third')
