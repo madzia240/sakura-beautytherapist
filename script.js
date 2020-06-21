@@ -27,7 +27,7 @@ const firstBtn = document.querySelector('.firstBtn')
 const secondBtn = document.querySelector('.secondBtn')
 const thirdBtn = document.querySelector('.thirdBtn')
 const fourthBtn = document.querySelector('.fourthBtn')
-const hr = document.querySelector('hr')
+const hr = document.querySelector('.section')
 
 firstBtn.addEventListener('click', () => {
     firstSec.style.display = 'block'
